@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer-div">
       <div className="container py-4">
         <h3 className="text-uppercase mb-4">Contact Us</h3>
-        <div className="contact-div d-flex mb-4 mb-lg-5">
+        <div className="contact-div mb-4">
           <div className="contact-cards p-3 d-flex align-items-center">
             <a
               href="mailto:contact@stock-mart.in"
@@ -223,7 +223,7 @@ const Footer = () => {
                   </p>
                 </div>
                 <div className="col-6 ps-5 pe-5">
-                  <div className="d-flex" style={{ gap: "1.5em" }}>
+                  <div className="d-flex justify-content-between">
                     <Link
                       to="/privacy-policy"
                       className="text-decoration-none text-dark"
@@ -363,7 +363,7 @@ const Footer = () => {
             </div>
           </div>
           <div
-            className="d-flex justify-content-between"
+            className="d-flex justify-content-between fat-footer mt-3"
             style={{ fontSize: "0.75em", gap: "1em" }}
           >
             <p>Privacy Policy</p>
