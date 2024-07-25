@@ -24,6 +24,16 @@ const Home = () => {
             className="img-fluid"
           />
         </picture>
+        <div className="d-none d-lg-block position-absolute form-desktop">
+          <h1 className="text-uppercase pay-text mb-0">pay for your</h1>
+          <h1 className="text-uppercase pe-2 success-text mb-3">success</h1>
+          <h1 className="join-text">
+            Join the stoxCalls Community of successful trader today!
+          </h1>
+          <div>
+            <form className="desktop-form"></form>
+          </div>
+        </div>
       </div>
       {/* services*/}
       <div className="container my-5">
@@ -35,36 +45,36 @@ const Home = () => {
         </h3>
         <div className="service-div d-flex text-center">
           <div className="feature-card">
-            <img className="img-fluid mb-1" src={intraday} />
-            <div className="px-2 py-3">
+            <img className="img-fluid" src={intraday} />
+            <div className="px-2 pb-3">
               <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                 Minimum Risk/ More Profit
               </h5>
-              <p>
+              <p className="secondary-text">
                 Obtaining higher returns in our primary goal. That's why the
                 risk/ reward ration we use to manage capital and risk of loss.
               </p>
             </div>
           </div>
           <div className="feature-card">
-            <img className="img-fluid mb-1" src={nifty} />
-            <div className="px-2 py-3">
+            <img className="img-fluid" src={nifty} />
+            <div className="px-2 pb-3">
               <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                 Minimum Risk/ More Profit
               </h5>
-              <p>
+              <p className="secondary-text">
                 Obtaining higher returns in our primary goal. That's why the
                 risk/ reward ration we use to manage capital and risk of loss.
               </p>
             </div>
           </div>
           <div className="feature-card">
-            <img className="img-fluid mb-1" src={stocks} />
-            <div className="px-2 py-3">
+            <img className="img-fluid" src={stocks} />
+            <div className="px-2 pb-3">
               <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                 Minimum Risk/ More Profit
               </h5>
-              <p>
+              <p className="secondary-text">
                 Obtaining higher returns in our primary goal. That's why the
                 risk/ reward ration we use to manage capital and risk of loss.
               </p>
@@ -79,7 +89,9 @@ const Home = () => {
             <h1 style={{ fontFamily: "Metropolis-Bold" }}>
               Did we get you excited?
             </h1>
-            <p>Click on the Subscribe Now to get StoxCalls</p>
+            <p className="secondary-text">
+              Click on the Subscribe Now to get StoxCalls
+            </p>
           </div>
           <div>
             <button
@@ -170,7 +182,7 @@ const Home = () => {
                     <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                       Minimum Risk/ More Profit
                     </h5>
-                    <p>
+                    <p className="secondary-text m-0">
                       Obtaining higher returns in our primary goal. That's why
                       the risk/ reward ration we use to manage capital and risk
                       of loss.
@@ -183,7 +195,7 @@ const Home = () => {
                     <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                       Personalized Customer Support
                     </h5>
-                    <p>
+                    <p className="secondary-text m-0">
                       Get proper Follow-ups and News information, instant market
                       support and resistance level.
                     </p>
@@ -197,7 +209,7 @@ const Home = () => {
                     <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                       Expert Advice
                     </h5>
-                    <p>
+                    <p className="secondary-text m-0">
                       Get direct discussion with our analist team for
                       outstanding result. Get reserch based stock prediction
                       with guidance.
@@ -210,7 +222,7 @@ const Home = () => {
                     <h5 style={{ fontFamily: "Metropolis-Bold" }}>
                       Best Market Tips
                     </h5>
-                    <p>
+                    <p className="secondary-text m-0">
                       Get religibla & accurate stock market trading tips with
                       best research and telephonic support in india.
                     </p>

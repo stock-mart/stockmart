@@ -21,6 +21,8 @@
     rgba(0, 76, 170, 1) 0%,
     rgba(86, 162, 255, 1) 100%
   );
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
   min-width: fit-content;
 }
