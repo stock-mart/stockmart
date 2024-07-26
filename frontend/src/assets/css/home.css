@@ -78,13 +78,173 @@
   font-size: 1.3em;
 }
 
+.desktop-form {
+  margin-top: 1.3em;
+  border-radius: 20px;
+  padding: 2em;
+  background-color: rgba(0, 114, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 70%;
+}
+
+.form-heading {
+  font-family: "Metropolis-Bold";
+  font-size: 1.6em;
+}
+
+small {
+  line-height: 0;
+}
+
+.desktop-form div {
+  margin-bottom: 1em;
+}
+
+.form-tablet {
+  display: none;
+}
+
+.mobile-heading {
+  display: none;
+}
+
 @media screen and (max-width: 1500px) {
+  .form-desktop {
+    top: 7%;
+    left: 5%;
+  }
   .success-text {
     font-size: 4em;
   }
 
   .feature-card p {
     font-size: 0.9em !important;
+  }
+
+  .desktop-form {
+    padding: 1.4em;
+  }
+
+  .form-heading {
+    font-size: 1.4em;
+  }
+
+  .pay-text {
+    font-size: 1.3em;
+  }
+
+  .success-text {
+    font-size: 4em;
+  }
+
+  .join-text {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1385px) {
+  .success-text {
+    font-size: 3.2em;
+  }
+
+  .join-text {
+    font-size: 1em;
+  }
+
+  .form-desktop {
+    top: 6%;
+    left: 9%;
+  }
+
+  .service-content h5 {
+    font-size: 1.1em;
+  }
+
+  .form-heading {
+    font-size: 1.3em;
+  }
+
+  .desktop-form {
+    width: 60%;
+    padding: 1.2em;
+  }
+
+  .desktop-form select,
+  input {
+    font-size: 0.85em !important;
+  }
+
+  .desktop-form button {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .success-text {
+    font-size: 2.8em;
+  }
+
+  .join-text {
+    font-size: 0.9em;
+  }
+
+  .pay-text {
+    font-size: 1.1em;
+  }
+
+  .form-desktop {
+    top: 5%;
+    left: 5.5%;
+  }
+
+  .form-heading {
+    font-size: 1.1em;
+  }
+
+  .desktop-form {
+    width: 60%;
+    padding: 1.3em 1em;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .success-text {
+    font-size: 2em;
+  }
+
+  .join-text {
+    font-size: 0.8em;
+  }
+
+  .pay-text {
+    font-size: 0.9em;
+  }
+
+  .form-desktop {
+    top: 6%;
+    left: 5.5%;
+  }
+
+  .form-heading {
+    font-size: 0.8em;
+  }
+
+  .desktop-form {
+    margin-top: 0;
+    padding: 1em;
+  }
+
+  .desktop-form select,
+  input {
+    font-size: 0.65em !important;
+  }
+
+  .desktop-form p {
+    font-size: 0.6em !important;
+  }
+
+  .service-img {
+    height: 63%;
   }
 }
 
@@ -106,22 +266,101 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .mobile-heading {
+    display: block;
+    z-index: 0;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .success-text {
+    font-size: 3.4em;
+  }
+
+  .join-text {
+    padding: 0.5em 1em;
+    font-size: 1em;
+  }
+
+  .pay-text {
+    font-size: 1.2em;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 820px) {
+  .form-tablet {
+    z-index: 0;
+    top: 7%;
+    left: 4.5%;
+  }
+
+  .form-tablet {
+    width: 520px;
+    display: block !important;
+  }
+
   .features-div {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 1em;
   }
+
   .features-div feature-card {
     width: 100%;
   }
+
   .feature-card p {
     font-size: 1em !important;
   }
+
   .home-page p {
     font-size: 1em;
   }
+
   .service-div {
     flex-direction: row;
+  }
+
+  .service-content h5 {
+    font-size: 0.9em;
+  }
+
+  .service-img {
+    height: 46%;
+  }
+
+  .success-text {
+    font-size: 1.3em;
+  }
+
+  .join-text {
+    font-size: 0.7em;
+  }
+
+  .pay-text {
+    font-size: 0.5em;
+  }
+
+  .form-heading {
+    font-size: 0.7em;
+  }
+
+  .desktop-form div {
+    margin-bottom: 0.7em;
+  }
+
+  .desktop-form {
+    padding: 0.7em;
+  }
+
+  .desktop-form bottom {
+    font-size: 0.65em !important;
   }
 }
