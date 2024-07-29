@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      dbName: "dynem-website",
+      dbName: "website",
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });

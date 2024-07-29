@@ -3,7 +3,7 @@ import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import path from "path";
 import cors from "cors";
-// import formRoutes from "./routes/form.routes.js";
+import formRoutes from "./routes/form.routes.js";
 
 // setting up basic variables
 dotenv.config();
@@ -11,17 +11,18 @@ connectDB();
 const app = express();
 
 // using cors
-app.use(
-  cors({
-    origin: "https://stock-mart.in",
-  })
-);
+const corsOptions = {
+  origin: "http://localhost:5173",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // setting all routes
-// app.use("/api/v1/form", formRoutes);
+app.use("/api/v1/form", formRoutes);
 
 // adding to production
 const __dirname = path.resolve();

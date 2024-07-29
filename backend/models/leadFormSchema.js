@@ -20,7 +20,6 @@ const leadFormSchema = new mongoose.Schema(
     service: {
       type: String,
       trim: true,
-      required: [true, "Service field missing"],
     },
     capitalInvestment: {
       type: String,
