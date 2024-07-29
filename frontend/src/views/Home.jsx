@@ -12,13 +12,14 @@ import stocks from "../assets/images/stock.png";
 import { useEffect, useState } from "react";
 import Navabar from "../components/Navabar";
 import WhatsAppBot from "../components/WhatsAppBot";
+import axios from "axios";
 
 const Home = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 640) {
+      if (window.innerWidth <= 500) {
         const timer = setTimeout(() => {
           setShow(true);
         }, 5000);
@@ -34,10 +35,32 @@ const Home = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [service, setService] = useState("");
+  const [capitalInvestment, setCapitalInvestment] = useState("");
+
+  const submitLead = async (e) => {
+    console.log("entering here");
+    e.preventDefault();
+
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const lead = { name, email, phoneNumber, service, capitalInvestment };
+    const { data } = await axios.post("/api/v1/form", lead, config);
+    if (data) {
+      alert("Details Submitted Succesfully!");
+    }
+  };
   return (
     <>
       <Navabar />
-      <WhatsAppBot/>
+      <WhatsAppBot />
       <div className="home-page">
         <div
           className={`modal fade ${show ? "show" : ""}`}
@@ -63,7 +86,7 @@ const Home = () => {
                     onClick={handleClose}
                   ></button>
                 </div>
-                <form className="p-2 pt-0 popup-form">
+                <form className="p-2 pt-0 popup-form" onSubmit={submitLead}>
                   <h2 className="form-heading">Enquiry Form</h2>
                   <div className="mb-3">
                     <input
@@ -72,6 +95,8 @@ const Home = () => {
                       className="form-control"
                       id="exampleFormControlInput1"
                       placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div className="mb-3">
@@ -81,6 +106,8 @@ const Home = () => {
                       className="form-control"
                       id="exampleFormControlInput1"
                       placeholder="Phone Number"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
                     />
                   </div>
                   <div className="mb-3">
@@ -90,13 +117,15 @@ const Home = () => {
                       className="form-control"
                       id="exampleFormControlInput1"
                       placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="mb-3">
                     <select
                       className="form-select"
-                      required
                       aria-label="Default select example"
+                      onChange={(e) => setService(e.target.value)}
                     >
                       <option selected>Select Service</option>
                       <option value="Stock Market Intraday">
@@ -114,7 +143,7 @@ const Home = () => {
                     <select
                       className="form-select"
                       aria-label="Default select example"
-                      required
+                      onChange={(e) => setCapitalInvestment(e.target.value)}
                     >
                       <option selected>Select Capital Investment</option>
                       <option value="Stock Market Intraday">
@@ -180,7 +209,7 @@ const Home = () => {
               Join the stoxCalls Community of successful trader today!
             </h1>
             <div>
-              <form className="desktop-form">
+              <form className="desktop-form" onSubmit={submitLead}>
                 <h2 className="form-heading">Enquiry Form</h2>
                 <div className="">
                   <input
@@ -189,6 +218,8 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="">
@@ -198,6 +229,8 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
                 <div className="">
@@ -207,12 +240,14 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="d-flex" style={{ gap: "1em" }}>
                   <select
                     className="form-select w-50"
-                    required
+                    onChange={(e) => setService(e.target.value)}
                     aria-label="Default select example"
                   >
                     <option selected>Select Service</option>
@@ -229,7 +264,7 @@ const Home = () => {
                   <select
                     className="form-select w-50"
                     aria-label="Default select example"
-                    required
+                    onChange={(e) => setCapitalInvestment(e.target.value)}
                   >
                     <option selected>Select Capital Investment</option>
                     <option value="Stock Market Intraday">
@@ -276,7 +311,7 @@ const Home = () => {
               Join the stoxCalls Community of successful trader today!
             </h1>
             <div>
-              <form className="desktop-form">
+              <form className="desktop-form" onSubmit={submitLead}>
                 <h2 className="form-heading">Enquiry Form</h2>
                 <div className="">
                   <input
@@ -285,6 +320,8 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="d-flex" style={{ gap: "1em" }}>
@@ -294,6 +331,8 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                   <input
                     type="email"
@@ -301,13 +340,15 @@ const Home = () => {
                     className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="d-flex mb-2" style={{ gap: "1em" }}>
                   <select
                     className="form-select w-50"
-                    required
                     aria-label="Default select example"
+                    onChange={(e) => setService(e.target.value)}
                   >
                     <option selected>Select Service</option>
                     <option value="Stock Market Intraday">
@@ -323,7 +364,7 @@ const Home = () => {
                   <select
                     className="form-select w-50"
                     aria-label="Default select example"
-                    required
+                    onChange={(e) => setCapitalInvestment(e.target.value)}
                   >
                     <option selected>Select Capital Investment</option>
                     <option value="Stock Market Intraday">
@@ -465,8 +506,8 @@ const Home = () => {
               Our Features
             </h3>
             <p style={{ fontFamily: "Metropolis-Bold" }}>
-              We strogly syggest an effective intraday Trading Stragely Not Just
-              Intraday Tips For Intraday Trading.
+              We strongly syggest an effective intraday Trading Stragely Not
+              Just Intraday Tips For Intraday Trading.
             </p>
             <p>
               Are you looking for the best smart tips providing compony in
@@ -594,7 +635,7 @@ const Home = () => {
                   Our Features
                 </h3>
                 <p style={{ fontFamily: "Metropolis-Bold" }}>
-                  We strogly syggest an effective intraday Trading Stragely Not
+                  We strongly syggest an effective intraday Trading Stragely Not
                   Just Intraday Tips For Intraday Trading.
                 </p>
                 <p>

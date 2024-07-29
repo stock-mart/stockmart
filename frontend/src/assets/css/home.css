@@ -120,7 +120,7 @@ small {
   position: absolute;
   rotate: -90deg;
   top: 25%;
-  right: -7%;
+  right: -6%;
   border-radius: 15px;
   font-family: "Metropolis-Bold";
 }
@@ -134,7 +134,7 @@ input {
   font-size: 1em !important;
 }
 
-.popup-form .form-heading{
+.popup-form .form-heading {
   font-size: 1.3em;
 }
 
@@ -154,7 +154,7 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 }
@@ -202,7 +202,7 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 }
@@ -253,7 +253,7 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 }
@@ -290,7 +290,7 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 }
@@ -345,11 +345,11 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.1em;
   }
 }
@@ -425,7 +425,7 @@ input {
     font-size: 1.2em;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.1em;
   }
 }
@@ -510,7 +510,7 @@ input {
     font-size: 0.9em !important;
   }
 
-  .popup-form .form-heading{
+  .popup-form .form-heading {
     font-size: 1.2em;
   }
 }
