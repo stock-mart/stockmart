@@ -108,6 +108,57 @@ small {
   display: none;
 }
 
+.hero-div {
+  overflow: hidden;
+}
+
+.sticker-heading {
+  cursor: pointer;
+  background-color: #005fd5;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  rotate: -90deg;
+  top: 25%;
+  right: -7%;
+  border-radius: 15px;
+  font-family: "Metropolis-Bold";
+}
+
+.sticker-heading h1 {
+  font-size: 1em;
+}
+
+.popup-form select,
+input {
+  font-size: 1em !important;
+}
+
+.popup-form .form-heading{
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 1600px) {
+  .form-desktop {
+    top: 7%;
+    left: 7%;
+  }
+
+  .sticker-heading {
+    top: 25%;
+    right: -7.5%;
+  }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .form-desktop {
     top: 7%;
@@ -140,9 +191,28 @@ small {
   .join-text {
     font-size: 1.1em;
   }
+
+  .sticker-heading {
+    top: 25%;
+    right: -8.2%;
+  }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 1385px) {
+  .sticker-heading {
+    top: 25%;
+    right: -8.2%;
+  }
+
   .success-text {
     font-size: 3.2em;
   }
@@ -177,6 +247,15 @@ small {
   .desktop-form button {
     font-size: 0.9em;
   }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 1285px) {
@@ -205,9 +284,27 @@ small {
     width: 60%;
     padding: 1.3em 1em;
   }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 1055px) {
+  .sticker-heading {
+    top: 30%;
+    right: -10.5%;
+  }
+
+  .sticker-heading h1 {
+    font-size: 0.9em;
+  }
+
   .success-text {
     font-size: 2em;
   }
@@ -243,8 +340,17 @@ small {
     font-size: 0.6em !important;
   }
 
-  .service-img {
-    height: 63%;
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.1em;
   }
 }
 
@@ -264,9 +370,35 @@ small {
   .service-div {
     flex-direction: column;
   }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
 }
 
 @media screen and (max-width: 640px) {
+  .form-heading {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .sticker-heading {
+    width: 40%;
+    top: 45%;
+    right: -16%;
+    text-align: center;
+  }
+
+  .sticker-heading h1 {
+    font-size: 0.8em;
+  }
+
   .mobile-heading {
     display: block;
     z-index: 0;
@@ -292,9 +424,22 @@ small {
   .pay-text {
     font-size: 1.2em;
   }
+
+  .popup-form .form-heading{
+    font-size: 1.1em;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 820px) {
+  .sticker-heading {
+    top: 35%;
+    right: -13%;
+  }
+
+  .sticker-heading h1 {
+    font-size: 0.9em;
+  }
+
   .form-tablet {
     z-index: 0;
     top: 7%;
@@ -332,10 +477,6 @@ small {
     font-size: 0.9em;
   }
 
-  .service-img {
-    height: 46%;
-  }
-
   .success-text {
     font-size: 1.3em;
   }
@@ -362,5 +503,14 @@ small {
 
   .desktop-form bottom {
     font-size: 0.65em !important;
+  }
+
+  .popup-form select,
+  input {
+    font-size: 0.9em !important;
+  }
+
+  .popup-form .form-heading{
+    font-size: 1.2em;
   }
 }
