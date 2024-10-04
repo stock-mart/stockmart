@@ -43,7 +43,6 @@ const Home = () => {
   const [capitalInvestment, setCapitalInvestment] = useState("");
 
   const submitLead = async (e) => {
-    console.log("entering here");
     e.preventDefault();
 
     const config = {
@@ -58,6 +57,7 @@ const Home = () => {
       config
     );
     if (data) {
+      handleClose();
       alert("Details Submitted Succesfully!");
     }
   };
