@@ -11,9 +11,14 @@ connectDB();
 const app = express();
 
 // using cors
+app.use((req, res, next) => {
+  console.log("CORS Middleware Applied");
+  next();
+});
+
 app.use(
   cors({
-    origin: "https://stockmart-frontend.vercel.app",
+    origin: "*", // Allow all origins
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
