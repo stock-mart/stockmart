@@ -12,8 +12,10 @@ const app = express();
 
 // using cors
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://stockmart-frontend.vercel.app/",
   optionsSuccessStatus: 200,
+  methods: ["POST", "GET"],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
