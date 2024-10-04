@@ -52,7 +52,11 @@ const Home = () => {
       },
     };
     const lead = { name, email, phoneNumber, service, capitalInvestment };
-    const { data } = await axios.post("/api/v1/form", lead, config);
+    const { data } = await axios.post(
+      "https://stockmart-backend.vercel.app/api/v1/form",
+      lead,
+      config
+    );
     if (data) {
       alert("Details Submitted Succesfully!");
     }

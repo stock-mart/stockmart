@@ -12,7 +12,7 @@ const app = express();
 
 // using cors
 const corsOptions = {
-  origin: "https://stockmart-frontend.vercel.app/",
+  origin: "https://stockmart-frontend.vercel.app",
   optionsSuccessStatus: 200,
   methods: ["POST", "GET"],
   credentials: true,
