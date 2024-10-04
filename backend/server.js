@@ -11,14 +11,13 @@ connectDB();
 const app = express();
 
 // using cors
-const corsOptions = {
-  origin: "https://stockmart-frontend.vercel.app",
-  optionsSuccessStatus: 200,
-  methods: ["POST", "GET"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "https://stockmart-frontend.vercel.app",
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
