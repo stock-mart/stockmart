@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: "*", // Allow all origins
+    origin: "*", // Allow all origin
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
