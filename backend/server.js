@@ -23,6 +23,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // setting all routes
+app.get("/", (req, res) => {
+  res.json("Stock-Mart Backend Live");
+});
+
 app.use("/api/v1/form", formRoutes);
 
 // adding to production
